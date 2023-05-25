@@ -1,14 +1,31 @@
-# Spring Boot 前后端分离实战项目源码
+# Spring Boot 前后端分离实战项目
 
-## 课程介绍
+## （一）简介
 
 本课程是一个 Spring Boot 技术栈的实战类课程，课程共分为 3 个部分，当前仓库为课程的实战项目源码。前面两个部分为基础环境准备和相关概念介绍，第三个部分是 Spring Boot 项目实践开发。Spring Boot 介绍、前后端分离、API 规范等内容旨在让读者更加熟悉 SpringBoot 及企业开发中需要注意的事项并具有使用 SpringBoot 技术进行基本功能开发的能力；最后的项目实战为课程的主要部分，会带着大家实际的开发一个前后端分离的 Spring Boot 实践项目，让大家实际操作并从无到有开发一个线上项目，并学习到一定的开发经验以及其中的开发技巧，旨在让读者具有将 Spring Boot 真正应用于项目开发的能力；
 
-## 课程地址
+## （二）部署
 
-- [**课程地址:https://www.lanqiao.cn/courses/1244**](https://www.lanqiao.cn/courses/1244)
+1.使用spring-boot-project-front-end.....文件夹下的.sql中建表
 
-## 项目展示
+2.使用idea打开spring-boot-project-f.文件夹
+
+3.使用idea连接数据库中的springboot3_db表
+
+4.改变application.properties文件中的
+
+```
+spring.datasource.username=
+spring.datasource.password=
+```
+
+5.运行Application
+
+6.浏览器打开 http://localhost:8080/login.html 登录页
+
+## （三）项目展示
+
+下面的这个展示就是[原项目](https://github.com/imrewang/spring-boot-projects/tree/main/SpringBoot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81)的展示哩
 
 以下为实践项目的页面和功能展示，分别为：
 
@@ -30,58 +47,16 @@
 
 实践项目的主要功能和页面就是这些，通过项目展示大家也能够感受到，在实际应用开发中的高频次功能都已经实现，稍加修改就可以运用到企业开发中，整个项目的开发模式为前后端分离的模式，即 Spring Boot 提供后端接口，前端页面通过 Ajax 异步调用接口的方式与后端服务器进行交互并将数据填充至页面中，这也是目前企业开发中比较重用的开发模式，希望大家能够了解并且能够实际的上手开发。
 
-## 课程的五大特色
+## （四）总结
 
-- 实践项目页面美观且实用，交互效果完美
-- 包含从零搭建项目、功能开发到网站上线的完整流程
-- 开发教程详细完整、文档资源齐全
-- 代码+讲解+演示网站全方位保证，向 Hello World 教程说拜拜
-- 丰富你的开发技术栈，提升个人市场价值
+**1.Token**
 
-通过本课程你将学到以下内容：
+所谓的Token，其实就是服务端生成的一串加密字符串、以作客户端进行请求的一个“令牌”。
 
-- Spring Boot 3 技术栈的使用和开发技巧；
-- MySQL 8 数据库的基本使用方法；
-- Maven 的配置及使用；
-- SpringBoot 基础 web 功能开发；
-- SpringBoot 整合MyBatis；
-- SpringBoot 文件上传；
-- SpringBoot 全局异常处理；
-- 前后端分离详解；
-- AJAX 异步技术；
-- AdminLTE3、Bootstrap 4、SweetAlert、JqGrid、JQuery 等前端框架组件及控件的使用；
-- Swagger 在线 API 文档生成；
-- Linux 系统部署及发布项目；
-- 上线互联网项目的过程实践。
+当用户第一次使用账号密码成功进行登录后，服务器便生成一个Token及Token失效时间并将此返回给客户端，若成功登陆，以后客户端只需在有效时间内带上这个Token前来请求数据即可，无需再次带上用户名和密码。
 
-熟悉我的朋友应该都知道，我在写教程时一般都是“文章”+“源码”+“演示网站”同时提供的，因此在课程完结后，会将源码全部分享给每一位同学用于学习实践，本课程内容主要是抛砖引玉，根据该实践项目中所讲解的技术和开发技巧以及各个单独的功能点实现，可以结合自身业务将其改造成任何企业开发项目。
+**2.摘要算法**
 
-## 课程目录
+摘要算法之所以能指出数据是否被篡改过，就是因为摘要函数是一个单向函数，计算f(data)很容易，但通过digest反推data却非常困难。
 
-- [**开篇词：SpringBoot入门及前后端分离项目实践导读**](https://www.lanqiao.cn/courses/1244)
-- [第02课：快速认识 Spring Boot 技术栈](https://www.lanqiao.cn/courses/1244)
-- [第03课：开发环境搭建](https://www.lanqiao.cn/courses/1244)
-- [第04课：快速构建 Spring Boot 应用](https://www.lanqiao.cn/courses/1244)
-- [第05课：Spring Boot 之基础 web 功能开发](https://www.lanqiao.cn/courses)
-- [第06课：Spring Boot 之数据库连接操作](https://www.lanqiao.cn/courses/1244)
-- [第07课：Spring Boot 整合 MyBatis 操作数据库](https://www.lanqiao.cn/courses/1244)
-- [第08课：Spring Boot 处理文件上传及路径回显](https://www.lanqiao.cn/courses/1244)
-- [第09课：Spring Boot 项目实践之前后端分离详解](https://www.lanqiao.cn/courses/1244)
-- [第10课：Spring Boot 项目实践之 Ajax 技术使用教程](https://www.lanqiao.cn/courses/1244)
-- [第11课：Spring Boot 项目实践之  RESTful API 设计与实现](https://www.lanqiao.cn/courses/1244)
-- [第12课：Spring Boot 项目实践之登录模块实现](https://www.lanqiao.cn/courses/1244)
-- [第13课：Spring Boot 项目实践之分页功能实现](https://www.lanqiao.cn/courses/1244)
-- [第14课：Spring Boot 项目实践之 jqgrid 分页整合](https://www.lanqiao.cn/courses/1244)
-- [第15课：Spring Boot 项目实践之用户编辑功能实现](https://www.lanqiao.cn/courses/1244)
-- [第16课：Spring Boot 项目实践之用户管理模块实现](https://www.lanqiao.cn/courses/1244)
-- [第17课：Spring Boot 项目实践之图片管理模块](https://www.lanqiao.cn/courses/1244)
-- [第18课：Spring Boot 项目实践之信息管理模块实现](https://www.lanqiao.cn/courses/1244)
-
----
-
-## 交流
-
-> 大家有任何问题或者建议都可以在 [issues](https://github.com/ZHENFENG13/springboot-projects/issues) 中反馈给我，我会慢慢完善这个 Spring Boot 仓库。
-
-- 我的邮箱：2449207463@qq.com
-- QQ技术交流群：784785001
+而且，对原始数据做一个bit的修改，都会导致计算出的摘要完全不同。摘要算法就是通过摘要函数f()对任意长度的数据data计算出固定长度的摘要digest。
