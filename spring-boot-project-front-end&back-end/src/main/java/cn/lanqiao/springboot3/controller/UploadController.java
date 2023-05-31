@@ -37,7 +37,6 @@ public class UploadController {
         try {
             // 保存文件
             byte[] bytes = file.getBytes();
-            //https://blog.csdn.net/qq_36314960/article/details/104775557
             // getBytes方法用来将文件转换成一种字节数组的方式进行传输，会抛出IOException异常。
             Path path = Paths.get(Constants.FILE_UPLOAD_PATH + newFileName);
             //将路径字符串或连接形成路径字符串的字符串序列转换为路径。
